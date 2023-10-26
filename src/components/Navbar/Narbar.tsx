@@ -48,7 +48,7 @@ const Narbar = () => {
   return (
     <nav
       className={cn(
-        "absolute w-full top-0 py-6  backdrop-blur-lg transition-all duration-500 ease-in-out z-50 -translate-y-full",
+        "absolute w-full top-0 py-6 bg-white/75 backdrop-blur-[14px] transition-all duration-500 ease-in-out z-50 -translate-y-full",
         currentScrollY > 0 && "fixed w-full shadow-xl",
         (currentScrollY === 0 || isScroll) && "translate-y-0"
       )}
