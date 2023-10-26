@@ -6,7 +6,7 @@ interface CardProps {
 }
 const Card = ({ icon, text }: CardProps) => {
   return (
-    <div className=" w-72 h-44 bg-white rounded-[16px] p-8 grid place-content-between ">
+    <div className="h-40 bg-white rounded-[16px] p-8 grid place-content-between ">
       <span className="">
         <img
           src={icon}

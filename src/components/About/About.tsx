@@ -3,7 +3,7 @@ import Card from "./Card"
 /* eslint-disable react/no-unescaped-entities */
 const About = () => {
   return (
-    <section className="bg-green-200/40 py-32">
+    <section className="backgroudAbout  py-32 -z-40">
       <div className=" mx-auto w-full text-center space-y-5">
         <h2 className="font-semibold">We are BestChat</h2>
         <h3>
@@ -11,6 +11,7 @@ const About = () => {
           technology and continued innovation.
         </h3>
       </div>
+
       <div className="container grid grid-cols-2 gap-x-16 gap-y-8 mt-24">
         <Card
           icons={"./flag.png"}

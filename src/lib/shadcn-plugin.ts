@@ -88,7 +88,7 @@ export const shadcnPlugin = plugin(
 
       extend: {
         fontFamily: {
-          // bricolage: [`var(--font-bricolage-grotesque)`]
+          lato: [`var(--font-lato)`]
         },
         colors: {
           border: "hsl(var(--border))",
