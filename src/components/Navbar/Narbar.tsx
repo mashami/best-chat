@@ -47,13 +47,13 @@ const Narbar = () => {
   return (
     <nav
       className={cn(
-        "absolute w-full top-0 py-6 bg-white transition-all duration-500 ease-in-out z-50 -translate-y-full",
+        "absolute w-full top-0 py-6 md:bg-white backdrop-blur-md transition-all duration-500 ease-in-out z-50 -translate-y-full",
         currentScrollY > 0 && "fixed w-full shadow-xl",
         (currentScrollY === 0 || isScroll) && "translate-y-0"
       )}
     >
       <div className="px-4 md:container flex  items-center justify-between ">
-        <div className="flex items-center space-x-7">
+        <div className="flex items-center md:space-x-7 space-x-3">
           <img src="/logo.png" width={150} height={30} alt="logo" />
           <span className="group transition duration-300 ease-in-out mt-2">
             <NavigationMenu>
