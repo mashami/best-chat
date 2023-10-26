@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 const lato = Lato({
   subsets: ["latin"],
   variable: "--font-lato",
-  weight: ["100", "700", "400", "300"]
+  weight: ["100", "700", "400", "300", "900"]
 })
 
 export const metadata: Metadata = {

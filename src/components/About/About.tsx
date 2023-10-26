@@ -5,14 +5,14 @@ const About = () => {
   return (
     <section className="backgroudAbout  py-32 -z-40">
       <div className=" mx-auto w-full text-center space-y-5">
-        <h2 className="font-semibold">We are BestChat</h2>
+        <h2 className="font-extrabold text-[25px]">We are BestChat</h2>
         <h3>
           BestChat focusing on shaping the "future of communication" through
           technology and continued innovation.
         </h3>
       </div>
 
-      <div className="container grid grid-cols-2 gap-x-16 gap-y-8 mt-24">
+      <div className="px-4 md:container grid md:grid-cols-2 grid-cols-1 gap-x-16 gap-y-8 mt-24">
         <Card
           icons={"./flag.png"}
           text="We listen to learn, practice and verify, improve and never stop. "

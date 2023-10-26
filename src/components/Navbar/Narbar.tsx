@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils"
 import { useEffect, useState } from "react"
+import { List } from "../Icons/Icons"
 import { Button } from "../ui/button"
 
 /* eslint-disable @next/next/no-img-element */
@@ -51,7 +52,7 @@ const Narbar = () => {
         (currentScrollY === 0 || isScroll) && "translate-y-0"
       )}
     >
-      <div className="container flex  items-center justify-between ">
+      <div className="px-4 md:container flex  items-center justify-between ">
         <div className="flex items-center space-x-7">
           <img src="/logo.png" width={150} height={30} alt="logo" />
           <span className="group transition duration-300 ease-in-out mt-2">
@@ -89,7 +90,10 @@ const Narbar = () => {
             </NavigationMenu>
           </span>
         </div>
-        <div className="flex justify-center items-center space-x-12 font-semibold">
+        <div className="block md:hidden">
+          <List width={30} height={30} />
+        </div>
+        <div className="hidden md:flex justify-center items-center space-x-12 font-semibold">
           <ul className="flex space-x-12 ">
             <li className="cursor-pointer hover:text-secondary transition duration-300 ease-in-out">
               Home

@@ -7,7 +7,7 @@ interface CardProps {
 const Card = ({ icons, text }: CardProps) => {
   return (
     <CardWraper>
-      <span className="min-w-[60px] min-h-[70px]">
+      <span className=" min-w-[40px] md:min-w-[60px] min-h-[50px] md:min-h-[70px]">
         <img src={icons} style={{ objectFit: "cover" }} alt="image" />
       </span>
 
