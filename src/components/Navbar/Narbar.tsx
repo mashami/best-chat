@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils"
 import { useEffect, useState } from "react"
-import { List } from "../Icons/Icons"
+import { Close, List } from "../Icons/Icons"
 import { Button } from "../ui/button"
 
 /* eslint-disable @next/next/no-img-element */
@@ -17,6 +17,7 @@ const Narbar = () => {
   const [isScroll, setIsScroll] = useState(false)
   const [prevScrollY, setPrevScrollY] = useState(0)
   const [currentScrollY, setCurrentScrollY] = useState(0)
+  const [isMenu, setIsMenu] = useState<boolean>(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +48,7 @@ const Narbar = () => {
   return (
     <nav
       className={cn(
-        "absolute w-full top-0 py-6 md:bg-white backdrop-blur-md transition-all duration-500 ease-in-out z-50 -translate-y-full",
+        "absolute w-full top-0 py-6  backdrop-blur-lg transition-all duration-500 ease-in-out z-50 -translate-y-full",
         currentScrollY > 0 && "fixed w-full shadow-xl",
         (currentScrollY === 0 || isScroll) && "translate-y-0"
       )}
@@ -91,8 +92,23 @@ const Narbar = () => {
           </span>
         </div>
         <div className="block md:hidden">
-          <List width={30} height={30} />
+          {isMenu ? (
+            <Close
+              width={30}
+              height={30}
+              className="transition duration-500 ease-in-out"
+              onClick={() => setIsMenu((pre) => !pre)}
+            />
+          ) : (
+            <List
+              width={30}
+              height={30}
+              className="transition duration-500 ease-in-out"
+              onClick={() => setIsMenu((pre) => !pre)}
+            />
+          )}
         </div>
+        {/* {isMenu && <div className="h-full w-full bg-white"></div>} */}
         <div className="hidden md:flex justify-center items-center space-x-12 font-semibold">
           <ul className="flex space-x-12 ">
             <li className="cursor-pointer hover:text-secondary transition duration-300 ease-in-out">

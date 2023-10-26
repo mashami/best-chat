@@ -3,6 +3,7 @@ interface IconsProps {
   width?: number
   height?: number
   className?: string
+  onClick?: () => void
 }
 export const Twitter = ({ width = 36, height = 36, className }: IconsProps) => {
   return (
@@ -71,16 +72,44 @@ export const Arrow = ({ width = 20, height = 20, className }: IconsProps) => {
     </svg>
   )
 }
-export const List = ({ width = 20, height = 20, className }: IconsProps) => {
+export const List = ({
+  width = 20,
+  height = 20,
+  className,
+  onClick
+}: IconsProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
       fill="#000000"
+      className={className}
+      onClick={onClick}
       viewBox="0 0 256 256"
     >
       <path d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128ZM40,76H216a12,12,0,0,0,0-24H40a12,12,0,0,0,0,24ZM216,180H40a12,12,0,0,0,0,24H216a12,12,0,0,0,0-24Z" />
+    </svg>
+  )
+}
+
+export const Close = ({
+  width = 20,
+  height = 20,
+  className,
+  onClick
+}: IconsProps) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      className={className}
+      onClick={onClick}
+      fill="#000000"
+      viewBox="0 0 256 256"
+    >
+      <path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z" />
     </svg>
   )
 }
