@@ -3,13 +3,13 @@ import Image from "next/image"
 /* eslint-disable react/no-unescaped-entities */
 const Hero = () => {
   return (
-    <section className="px-4 md:container mt-[120px]">
+    <section className="px-4 md:container mt-[120px] z-30">
       <h1 className=" md:font-bold font-extrabold text-center leading-9 md:leading-normal md:pb-0 pb-8">
         Between customer and order, there's a bridge Let's power a strong
         connection for all
       </h1>
 
-      <div className=" w-[300px] h-[120px] grid place-content-center md:w-[1147px] md:h-[480px] px-24 mt-[900px] md:mt-52 relative z-40">
+      <div className=" w-[300px] h-[120px] grid place-content-center md:w-[1147px] md:h-[480px] px-24 mt-[900px] md:mt-52 relative z-30">
         <Image src={"/heroPicture.png"} fill alt={"footer-image"} />
 
         <div className="absolute md:top-[-128px]  top-[-900px] md:left-[265px]  w-[234px] h-[234px] md:grid place-content-center px-3 md:pt-2 md:pb-3 py-8 bg-[#CCD8FD] rounded-full text-center -z-20 opacity-80">

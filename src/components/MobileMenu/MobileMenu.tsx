@@ -1,11 +1,11 @@
 "use client"
 
 import { cn } from "@/lib/utils"
+import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 import { Arrow, Caretdown } from "../Icons/Icons"
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
-
 interface MobileMenuProps {
   isOpen: boolean
 }
@@ -16,15 +16,14 @@ const MobileMenu = ({ isOpen }: MobileMenuProps) => {
     if (isOpen) {
       document.body.style.overflow = "hidden"
     } else {
-      document.body.style.overflow = "auto"
+      document.body.style.overflow = "unset"
     }
   }, [isOpen])
 
   return (
     <div
       className={cn(
-        "px-6 bg-white w-full h-screen absolute z-50 -translate-y-[200%] transition-all  duration-300 ease-in-out top-24",
-
+        "h-screen px-6 bg-white w-full fixed top-0 z-50 -translate-y-full transition-all  duration-300 ease-in-out overflow-y-auto py-24 pb-44",
         isOpen && "translate-y-0"
       )}
     >
@@ -40,11 +39,15 @@ const MobileMenu = ({ isOpen }: MobileMenuProps) => {
             )}
           />
         </li>
+
         {isSelectorOpen && (
-          <ul
+          <motion.ul
+            initial={{ opacity: 0, y: -35 }}
+            animate={{ opacity: 1, y: 1 }}
+            transition={{ duration: 0 }}
             className={cn(
-              "space-y-6 flex flex-col transition duration-500 ease-in-out w-full items-start justify-start font-normal  translate-y-0",
-              isSelectorOpen && "translate-y-[10px]"
+              "space-y-6 flex flex-col transition duration-500 ease-in-out w-full items-start justify-start font-normal  translate-y-0"
+              // isSelectorOpen && "translate-y-[10px]"
             )}
           >
             <li className=" cursor-pointer transition duration-300 ease-in-out  w-full">
@@ -68,14 +71,16 @@ const MobileMenu = ({ isOpen }: MobileMenuProps) => {
               FAQs
               <div className="w-full h-[1px] bg-black/5 mt-4"></div>
             </li>
-          </ul>
+          </motion.ul>
         )}
 
         <li className="cursor-pointer">Company</li>
         <li className="cursor-pointer">FAQs</li>
         <li className="cursor-pointer">Blog</li>
       </ul>
+
       <div className="w-full h-[1px] bg-black/5 my-8"></div>
+
       <span className={cn("space-y-4 transition duration-300 ease-in-out")}>
         <Input
           type="email"
@@ -88,7 +93,7 @@ const MobileMenu = ({ isOpen }: MobileMenuProps) => {
             <Arrow
               width={20}
               height={16}
-              className=" absolute bottom-[35%] right-[6.3rem]  group-hover:right-[5.5rem] group-hover: group-transition duration-300 ease-in-out"
+              className=" absolute bottom-[35%] right-[5.8rem]  group-hover:right-[5rem] group-hover: group-transition duration-300 ease-in-out"
             />
           </Button>
         </div>

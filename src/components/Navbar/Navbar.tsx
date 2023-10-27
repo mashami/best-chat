@@ -12,8 +12,8 @@ import { useEffect, useState } from "react"
 import { Close, List } from "../Icons/Icons"
 import MobileMenu from "../MobileMenu/MobileMenu"
 import { Button } from "../ui/button"
-
 /* eslint-disable @next/next/no-img-element */
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScroll, setIsScroll] = useState(false)
@@ -50,11 +50,13 @@ const Navbar = () => {
     <>
       <nav
         className={cn(
-          "absolute w-full top-0 py-6 bg-white/75 backdrop-blur-[14px] transition-all duration-500 ease-in-out z-40 -translate-y-full",
+          "absolute w-full top-0 py-6 bg-white/75 backdrop-blur-[14px] transition-all duration-500 ease-in-out -translate-y-full",
           currentScrollY > 0 && "fixed w-full shadow-xl",
+          isMenuOpen && "shadow-none",
           (currentScrollY === 0 || isScroll || isMenuOpen) && "translate-y-0",
-          isMenuOpen && "backdrop-blur-0"
+          isMenuOpen && "backdrop-blur-0 bg-white"
         )}
+        style={{ zIndex: "1000" }}
       >
         <div className="px-4 md:container flex  items-center justify-between ">
           <div className="flex items-center md:space-x-7 space-x-3">
@@ -166,8 +168,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-
-      <MobileMenu isOpen={isMenuOpen} />
+      {isMenuOpen && <MobileMenu isOpen={isMenuOpen} />}
     </>
   )
 }
