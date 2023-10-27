@@ -23,7 +23,7 @@ const MobileMenu = ({ isOpen }: MobileMenuProps) => {
   return (
     <div
       className={cn(
-        "h-screen px-6 bg-white w-full fixed top-0 z-50 -translate-y-full transition-all  duration-300 ease-in-out overflow-y-auto py-24 pb-44",
+        "h-screen px-6 bg-white w-full fixed md:hidden top-0 z-50 -translate-y-full transition-all  duration-300 ease-in-out overflow-y-auto py-24 pb-44",
         isOpen && "translate-y-0"
       )}
     >
