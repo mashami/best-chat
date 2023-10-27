@@ -51,11 +51,11 @@ const LocationSection = () => {
             </div>
           </div>
         </div>
-        <div className="bg-green-300/25 py-12 px-8  rounded-xl md:hidden block ">
-          <h1 className="font-extrabold mb-10 w-full text-[20px] px-16 text-center leading-5 ">
+        <div className="bg-green-300/25 py-12 px-4  rounded-xl md:hidden block ">
+          <h1 className="font-extrabold mb-10 w-full text-[25px] px-16 text-center leading-8 ">
             Let us be your advantage now
           </h1>
-          <span className="bg-red-500 space-y-4 ">
+          <span className=" space-y-4 ">
             <Input
               type="email"
               placeholder="Enter your work Email"
@@ -63,11 +63,11 @@ const LocationSection = () => {
             />
             <div className="bg-black relative group hover:bg-secondary transition duration-300 ease-in-out grid place-items-center rounded-lg  py-2 ">
               <Button className="group-hover:bg-secondary transition duration-300 ease-in-out h-full flex items-center justify-center ">
-                <p className="text-white font-bold">Entry for free Now</p>
+                <p className="text-white font-bold">Try for free Now</p>
                 <Arrow
                   width={20}
                   height={16}
-                  className=" absolute bottom-[35%] right-[3.8rem]  group-hover:right-[3rem] group-hover: group-transition duration-300 ease-in-out"
+                  className=" absolute bottom-[35%] right-[4.7rem] md:right-[3.8rem]  md:group-hover:right-[3rem] group-hover:right-[4rem] group-hover: group-transition duration-300 ease-in-out"
                 />
               </Button>
             </div>
