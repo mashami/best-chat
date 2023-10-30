@@ -26,8 +26,8 @@ const Footer = () => {
 
           <div className=" flex md:flex-row flex-col md:justify-center  md:items-center text-[15px] space-y-8 md:space-y-0 ">
             <span className=" flex space-x-6 pr-9">
-              <Twitter width={20} height={20} />
-              <YouTube width={20} height={20} />
+              <Twitter width={20} height={20} className="cursor-pointer" />
+              <YouTube width={20} height={20} className="cursor-pointer" />
             </span>
 
             <span className="md:underline flex  md:items-center  md:justify-center space-x-[1px]  hover:text-secondary cursor-pointer group transition duration-300 ease-in-out">

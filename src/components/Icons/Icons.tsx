@@ -11,6 +11,7 @@ export const Twitter = ({ width = 36, height = 36, className }: IconsProps) => {
       xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
+      className={className}
       fill="#000000"
       viewBox="0 0 256 256"
     >
@@ -24,6 +25,7 @@ export const YouTube = ({ width = 20, height = 20, className }: IconsProps) => {
       xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
+      className={className}
       fill="#000000"
       viewBox="0 0 256 256"
     >
